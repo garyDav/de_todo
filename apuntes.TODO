@@ -1,0 +1,65 @@
+* Moto Taxi
+  + Cliente
+    - mapa (todas las motos activadas)
+      - estados: libre, ocupado (automático y manual)
+
+    - menu (solicitud)
+      - ubicacion: actual (de donde), marcador (otro lugar), texto (detalles)
+      - destino: marcador (a donde), texto (direccion, zona)
+        - Tiempo, distancia
+      - al usuario le llegue una notificacion (celular, correo)
+
+  + Conductor
+    - lista de solicitudes (aceptar o rechazar)
+    - terminar destino
+
+  + Admin
+    - registro (listado de motos)
+        - cuota de la moto, asignarle el equipo (chaleco, etc.) para la activación
+    - listado de solicitudes: asignar a los conductores
+
+* Delivery
+  + Admin
+    - Registrar restaurantes (ubicacion GPS)
+    - Registrar menu
+    - Negocios
+    - Comida
+      - Rapida (Pizza, hamburguesas, pollos)
+      - Almuerzos, etc
+      - Parrilladas
+      - Extranjera
+      - Snack
+    - Mercado
+    - Mandado (enviar, recoger, comprar, etc)
+      - Entretenimiento (videos DVD)
+      - Pasajes de la terminal de buses
+      - Librerías
+      - Farmacias
+    - Licorerías (recojer del almacen, licorerías externas)
+    - listado de solicitudes de pedido: (3 estados: solititud, pedido listo, entrega)
+  + Cliente
+    - mapa (todos los restaurantes, cerca de tí)
+    - menu
+      - Categorias (comida, mercado, mandado, licorerías)
+        - listado de Negocios, (buscador)
+    Busqueda
+    Flujo:
+    - Cliente -> Pedido -> notificacion (celular, correo)
+                      |
+                       --> seguimiento del pedido (obtener datos del conductor)
+
+Tareas Moto Taxi:
+  - Acciones Moto Taxi
+    ☐ Registro de Clientes (Google oauth, Formulario)
+    ☐ Login (Credenciales)
+    ☐ Solicitar Moto Taxi: (Origen <-> Destino)
+    ☐ Seguimiento (Moto Solicitado)
+    ☐ Recibir notificaciones
+    ☐ Solicitar una moto particular ó solo hacer la solicitud
+  - Vistas
+    ☐ Registro -> Login (Signin <-> Signup)
+    ☐ Solicitud (Mapa en tiempo real)
+    ☐ Seguimiento (Admin)
+    ☐ Calificar conductor
+    ☐ Notificaciones (Solicitud - Culminación del recorrido)
+    ☐ Historial
